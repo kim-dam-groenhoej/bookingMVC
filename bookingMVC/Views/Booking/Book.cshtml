@@ -1,4 +1,4 @@
-﻿
+﻿@model bookingMVC.ViewModels.BookVM
 @{
     ViewBag.Title = "Book";
 }
@@ -7,13 +7,70 @@
 
 <div class="book">
     <form>
-        
-        <select>
-            
+
+        <label>Værelser</label>
+        <select name="roomCount">
+            @foreach (var possibleRoom in Model.PossibleRooms)
+            {
+                <option value="@possibleRoom.RoomCount">
+                    @possibleRoom.RoomCount
+                </option>
+            }
         </select>
-        
-        
+
+        <label>Start</label>
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+                    <div class="form-group">
+                        <div class='input-group date' id='startDate'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <label>Slut</label>
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+
+                    <div class="form-group">
+                        <div class="input-group date" id="endDate">
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+        <button>Find ledige værelser</button>
 
     </form>
 
 </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#startDate').datetimepicker({
+                defaultDate: "11/1/2013"
+            });
+
+            $('#endDate').datetimepicker({
+                defaultDate: "11/1/2013"
+            });
+        });
+    </script>   
+}

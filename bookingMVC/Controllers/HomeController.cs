@@ -12,6 +12,9 @@ namespace bookingMVC.Controllers
     {
         public ActionResult Index()
         {
+            var controller = new BusinessLogic.BookingController();
+            var isFree = controller.IsRoomAvailable(new Room(), DateTime.Now, DateTime.Now.AddDays(1));
+
             return View();
         }
 

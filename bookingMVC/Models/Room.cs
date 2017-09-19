@@ -13,6 +13,15 @@ namespace bookingMVC.Models
 
         public int RoomCount { get; set; }
 
-        public RoomPrice RoomPrice { get; set; }
+        public virtual RoomPrice RoomPrice { get; set; }
+
+        public int RoomPriceId { get; set; }
+
+        public bool IsRoomAvailable(Room room, DateTime start, DateTime end)
+        {
+
+
+            return true;
+        }
     }
 }

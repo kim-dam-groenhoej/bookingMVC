@@ -11,6 +11,10 @@ namespace bookingMVC.Models
 
         public decimal Price { get; set; }
 
-        public Room Room { get; set; }
+        public virtual ICollection<Room> Rooms
+        {
+            get;
+            set;
+        }
     }
 }

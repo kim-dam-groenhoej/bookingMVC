@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/site.min.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -39,6 +42,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+<script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker.min.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
