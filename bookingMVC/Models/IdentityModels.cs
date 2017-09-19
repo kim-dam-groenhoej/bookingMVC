@@ -46,5 +46,11 @@ namespace bookingMVC.Models
         }
 
         public DbSet<Room> Rooms { get; set; }
+
+        public DbSet<Booking> Bookings { get; set; }
+
+        public DbSet<Option> Options { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
     }
 }

@@ -5,14 +5,12 @@ using System.Web;
 
 namespace bookingMVC.Models
 {
-    public class Room
+    public class Option
     {
         public int Id { get; set; }
+        public string Title { get; set; }
+        public decimal Price { get; set; }
 
-        public string Name { get; set; }
-
-        public int RoomCount { get; set; }
-
-        public RoomPrice RoomPrice { get; set; }
+        public virtual Booking Booking { get; set; }
     }
 }
