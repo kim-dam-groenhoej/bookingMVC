@@ -21,10 +21,10 @@
         <label>Start</label>
         <div class="container">
             <div class="row">
-                <div class='col-sm-6'>
+                <div class="col-sm-4">
                     <div class="form-group">
-                        <div class='input-group date' id='startDate'>
-                            <input type='text' class="form-control" />
+                        <div class="input-group date" id="startDate">
+                            <input type="text" class="form-control" />
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -38,11 +38,11 @@
         <label>Slut</label>
         <div class="container">
             <div class="row">
-                <div class='col-sm-6'>
+                <div class="col-sm-4">
 
                     <div class="form-group">
                         <div class="input-group date" id="endDate">
-                            <input type='text' class="form-control" />
+                            <input type="text" class="form-control" />
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
@@ -55,21 +55,27 @@
 
         <br />
         <button>Find ledige værelser</button>
+        
+        <div id="results">
+            
+        </div>
 
     </form>
-
 </div>
 
 @section scripts
 {
     <script type="text/javascript">
         $(function () {
+         
+           
             $('#startDate').datetimepicker({
-                defaultDate: "11/1/2013"
+                locale: 'da'
+                
             });
 
             $('#endDate').datetimepicker({
-                defaultDate: "11/1/2013"
+                locale: 'da'
             });
         });
     </script>   
